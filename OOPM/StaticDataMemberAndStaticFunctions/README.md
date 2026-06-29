@@ -1,0 +1,1 @@
+Static data member and static functions
