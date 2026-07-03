@@ -1,1 +1,0 @@
-Linkledlist data structure questions.
