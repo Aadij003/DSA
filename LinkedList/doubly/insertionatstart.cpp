@@ -1,0 +1,58 @@
+#include<iostream>
+using namespace std;
+class Node{
+public:
+Node* prev;
+int data;
+Node* next;
+Node(int value){
+    prev=NULL;
+    data=value;
+    next=NULL;
+}
+};
+Node* creation(int x){
+    Node* h=NULL;
+    Node* t=NULL;
+    int p;
+    cout<<"enter data of"<<" "<<x<<" "<<"nodes:"<<endl;
+    for(int i=1;i<=x;i++){
+        cin>>p;
+        if(h==NULL){
+            h=new Node(p);
+            t=h;
+        }else{
+            t->next=new Node(p);
+            t->next->prev=t;
+            t=t->next;
+        }
+    }
+    return h;
+}
+display(Node* H){
+    Node* T=H;
+    cout<<"linklist is:"<<endl;
+    while(T!=NULL){
+        cout<<T->data<<endl;
+        T=T->next;
+    }
+}
+void insertion(Node** HEAD){
+    int y;
+    cout<<"enter the value of node to insert:";
+    cin>>y;
+    Node* ttemp=new Node(y);
+    ttemp->next=*HEAD;
+    (*HEAD)->prev=ttemp;
+    *HEAD=ttemp;
+    display(*HEAD);
+}
+int main(){
+    Node* head;
+    int n;
+    cout<<"enter the no. of nodes: ";
+    cin>>n;
+    head=creation(n);
+    display(head);
+    insertion(&head);
+}
