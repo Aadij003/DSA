@@ -1,0 +1,1 @@
+Double Ended Queue - can be used to perform push and pop operations from any part of the queue i.e. either push and pop can happen from front part or can be performed from rear part of the queue. 
