@@ -1,3 +1,5 @@
+
+//another method to solve the left view of binary tree problem
 #include<iostream>
 #include<vector>
 using namespace std;
